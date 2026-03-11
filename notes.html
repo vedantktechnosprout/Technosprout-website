@@ -1,212 +1,218 @@
-what we do
 
-<section class="what-we-do py-5">
-        <div class="container">
-            <div class="row align-items-center">
+old header css
 
-                <!-- LEFT IMAGE -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="image-wrapper">
-
-                        <img src="assets/what-we-do.png" class="main-img" alt="What we do">
-
-                        <div class="circle-box">
-                            <img src="assets/circle.png" class="circle-rotate" alt="circle">
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- RIGHT CONTENT -->
-                <div class="col-lg-6">
-
-                    <h2 class="problem-title">
-                        <strong>What <br> we do?</strong>
-                    </h2>
-
-                    <p class="section-desc">
-                        We bring structure, governance, and scalability to your technology ecosystem.
-                        Our work typically includes:
-                    </p>
-
-                    <hr>
-
-                    <ul class="service-list">
-
-                        <li>
-                            <svg class="icon-check" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            Gain full visibility into their technology
-                        </li>
-
-                        <li>
-                            <svg class="icon-check" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            Simplify and consolidate fragmented systems
-                        </li>
-
-                        <li>
-                            <svg class="icon-check" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            Build a clear, scalable technology roadmap
-                        </li>
-
-                        <li>
-                            <svg class="icon-check" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            Improve operational efficiency
-                        </li>
-
-                        <li>
-                            <svg class="icon-check" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="9"></circle>
-                                <path d="M9 12l2 2l4 -4"></path>
-                            </svg>
-                            Reduce risk and increase control
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    .what-we-do {
-    background: #f5f5f5;
+.main-header {
+    background: #fff;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* IMAGE */
+/* ===== Logo ===== */
 
-.image-wrapper {
-    position: relative;
-    text-align: center;
+.logo img {
+    height: 50px;
 }
 
-.main-img {
-    width: 100%;
-    max-width: 480px;
-}
 
-/* CIRCLE */
+/* ===== Navbar Layout ===== */
 
-.circle-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.circle-rotate {
-    width: 120px;
-    animation: rotateCircle 10s linear infinite;
-}
-
-/* ROTATION */
-
-@keyframes rotateCircle {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* RIGHT SIDE */
-
-.problem-title strong {
-    font-size: 60px;
-    color: #4b0f73;
-    line-height: 1.2;
-}
-
-.section-desc {
-    font-size: 18px;
-    color: #555;
-    margin-top: 15px;
-}
-
-.service-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.service-list li {
+.navbar-collapse {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-    font-size: 17px;
 }
 
-.icon-check {
-    width: 22px;
-    height: 22px;
-    stroke: #6b2bbd;
-    fill: none;
-    stroke-width: 2;
+
+/* ===== Center Menu ===== */
+
+.navbar-nav {
+    align-items: center;
+    margin: auto;
+    /* center menu */
 }
 
-/* RESPONSIVE */
 
-@media(max-width:992px) {
+/* ===== Menu Links ===== */
 
-    .problem-title strong {
-        font-size: 45px;
-    }
-
-    .main-img {
-        max-width: 360px;
-    }
-
-    .circle-rotate {
-        width: 100px;
-    }
-
+.nav-link {
+    margin: 0 8px;
+    color: #424242 !important;
 }
 
-@media(max-width:768px) {
 
-    .problem-title {
+.nav-link:hover {
+    color: #130020 !important;
+    font-weight: medium;
+}
+
+
+/* ===== Button Right ===== */
+
+.btn-primary {
+    background: #591487;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #4b7f3b;
+}
+
+
+/* ===== Mobile Fix ===== */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        margin: 20px 0;
         text-align: center;
     }
 
-    .section-desc {
-        text-align: center;
+    .nav-link {
+        margin: 10px 0;
     }
 
-    .service-list {
-        max-width: 350px;
-        margin: auto;
-    }
-
-    .circle-rotate {
-        width: 90px;
+    .btn-primary {
+        display: inline-block;
+        margin-top: 10px;
     }
 
 }
 
-@media(max-width:480px) {
+/* ==============================
+HEADER
+============================== */
+/* HEADER */
 
-    .problem-title strong {
-        font-size: 34px;
+.main-header {
+    background: #fff;
+    padding: 0px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(131, 50, 236, 0.08);
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Desktop Menu */
+
+.navbar-nav {
+    align-items: center;
+}
+
+
+
+
+
+/* Button */
+
+.btn-primary {
+    background: #591487;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #4b7f3b;
+}
+
+/* OFFCANVAS MENU */
+
+.offcanvas {
+    width: 300px;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+/* Mobile Menu */
+
+.mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 15px;
+}
+
+.mobile-menu a {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.mobile-menu a:hover {
+    background: #f5f5f5;
+    color: #591487;
+}
+
+/* CONTACT AREA */
+
+.mobile-contact {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.mobile-contact p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.mobile-social a {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #591487;
+    transition: .3s;
+}
+
+.mobile-social a:hover {
+    color: #4b7f3b;
+}
+
+/* Scrollbar */
+
+.offcanvas-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width:991px) {
+
+    .desktop-btn {
+        display: none;
     }
 
-    .circle-rotate {
-        width: 75px;
+    .navbar-collapse {
+        display: none;
     }
 
 }
