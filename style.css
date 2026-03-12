@@ -1703,12 +1703,6 @@ color:#fff;
 transform:translateX(4px);
 }
 
-label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #36005A;
-}
 
 .custom-input {
     padding: 12px 14px;

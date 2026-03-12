@@ -215,7 +215,7 @@
                         governance, security, and control.
                     </p>
 
-                    <a href="#" class="btn btn-consult">
+                    <a href="tel:+9594415599" class="btn btn-consult">
                         <i class="fa fa-phone"></i> Let's Talk
                     </a>
                 </div>
@@ -337,31 +337,32 @@
                         <div class="row g-3">
 
                             <div class="col-md-6">
-                                <label>Name <span class="text-danger">*</span></label>
+                                <label style="color: #36005A;">Name <span class="text-danger">*</span></label>
                                 <input type="text" name="firstname" class="form-control custom-input"
                                     placeholder="Enter Your Full Name" required>
                             </div>
 
                             <div class="col-md-6">
-                                <label>E-mail <span class="text-danger">*</span></label>
+                                <label style="color: #36005A;">E-mail <span class="text-danger">*</span></label>
                                 <input type="email" name="email" class="form-control custom-input"
                                     placeholder="Enter Your E-mail" required>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Phone Number <span style="color:red">*</span></label>
-                                <input type="tel" name="phone" class="form-control phone-input"
-                                    placeholder="Enter phone number" required>
+                                <label style="color: #36005A;">Phone Number <span style="color:red">*</span></label>
+                                <input id="phone" type="tel" class="form-control phone-input"
+                                    placeholder="Enter phone number">
                             </div>
 
                             <div class="col-md-6">
-                                <label>Organisation Name <span class="text-danger">*</span></label>
+                                <label style="color: #36005A;">Organisation Name <span
+                                        class="text-danger">*</span></label>
                                 <input type="text" name="company" class="form-control custom-input"
                                     placeholder="Enter Your Organisation Name" required>
                             </div>
 
                             <div class="col-12">
-                                <label>Add a Message</label>
+                                <label style="color: #36005A;">Add a Message</label>
                                 <textarea name="message" rows="4" class="form-control custom-input"
                                     placeholder="Enter Your Message..."></textarea>
                             </div>
@@ -391,7 +392,6 @@
 
                             const data = {
                                 submittedAt: Date.now(),
-
                                 fields: [
                                     { name: "firstname", value: form.firstname.value },
                                     { name: "email", value: form.email.value },
@@ -399,48 +399,40 @@
                                     { name: "company", value: form.company.value },
                                     { name: "message", value: form.message.value }
                                 ],
-
                                 context: {
                                     pageUri: window.location.href,
                                     pageName: document.title
                                 }
-
                             };
 
                             fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
-
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json"
                                 },
                                 body: JSON.stringify(data)
-
                             })
-
                                 .then(res => res.json())
+                                .then(response => {
 
-                                .then(data => {
+                                    console.log(response);
 
-                                    console.log(data);
-
-                                    if (data.status === "error") {
+                                    if (response.status === "error") {
                                         alert("Submission failed");
                                     } else {
-                                        alert("Form submitted successfully");
                                         form.reset();
+
+                                        // Redirect to thank you page
+                                        window.location.href = "thankyou.html";
                                     }
 
                                 })
-
                                 .catch(err => {
-
                                     console.error(err);
                                     alert("Submission failed");
-
                                 });
 
                         });
-
                     </script>
 
                 </div>
