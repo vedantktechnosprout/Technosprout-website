@@ -53,7 +53,9 @@
 
                     <ul class="navbar-nav mx-auto">
 
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
 
                         <li class="nav-item dropdown">
 
@@ -62,78 +64,121 @@
                             </a>
 
                             <ul class="dropdown-menu">
-
                                 <li><a class="dropdown-item" href="#">About Us</a></li>
                                 <li><a class="dropdown-item" href="#">Careers</a></li>
-
                             </ul>
 
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Capabilities</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
 
                     </ul>
 
-                    <a class="btn btn-consult desktop-btn" href="tel:+9594415599">
+                    <a class="btn btn-consult desktop-btn" href="tel:+919594415599">
                         <i class="fa-solid fa-phone me-1"></i> Get in Touch
                     </a>
 
                 </div>
-
             </div>
         </nav>
 
 
-        <!-- Mobile Offcanvas -->
+        <!-- MOBILE OFFCANVAS -->
+
         <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
 
             <div class="offcanvas-header">
+
                 <a class="navbar-brand logo" href="index.html">
                     <img src="assets/logo-transparent.png" alt="logo">
                 </a>
 
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+
             </div>
+
 
             <div class="offcanvas-body">
 
                 <ul class="mobile-menu">
 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Capabilities</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li class="mobile-dropdown">
+
+                        <button class="dropdown-btn">
+
+                            <span class="menu-label">
+                                Company
+                                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                            </span>
+
+                        </button>
+
+                        <ul class="dropdown-content">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Capabilities</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Blogs</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
 
                 </ul>
 
-                <!-- Contact -->
+
+                <hr class="line">
+
+
                 <div class="mobile-contact">
 
-                    <p><strong>Address</strong><br>
+                    <p>
+                        <strong>Address</strong><br>
                         1009, Lodha Supremus,<br>
                         Kolshet Road
                     </p>
 
-                        <p><strong>Email</strong><br>
-                        <a href="mailto:support@technosprout.in"  style="color: #fff;">support@technosprout.in</a>
+                    <p>
+                        <strong>Email</strong><br>
+                        <a href="mailto:support@technosprout.in">support@technosprout.in</a>
                     </p>
 
-                    <p><strong>Phone</strong><br>
-                        <a href="tel:+1234567890"  style="color: #fff;">+1 234 567 890</a>
+                    <p>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+919594415599">+91 95944 15599</a>
                     </p>
 
                     <div class="mobile-social">
+
                         <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-linkedin"></i></a>
+
                     </div>
 
                 </div>
@@ -144,58 +189,23 @@
 
     </header>
 
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <script>
 
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
 
-    <div class="offcanvas offcanvas-end" id="mobileMenu">
+            button.addEventListener("click", function () {
 
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
+                const dropdown = this.nextElementSibling;
 
-        <div class="offcanvas-body">
+                dropdown.classList.toggle("show");
 
-            <ul class="mobile-menu">
+                this.classList.toggle("active");
 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Solutions</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            });
 
-            </ul>
+        });
 
-            <!-- Contact Info -->
-
-            <div class="mobile-contact">
-
-                <p><strong>Address:</strong><br>
-                    123 Business Street,<br>
-                    New York, USA</p>
-
-                <p><strong>Email:</strong><br>
-                    info@company.com</p>
-
-                <p><strong>Phone:</strong><br>
-                    <a href="tel:+9594415599">+91 95944 15599</a>
-                </p>
-
-                <div class="mobile-social">
-
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-twitter"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
+    </script>
 
 
 
@@ -335,222 +345,226 @@
 
                     <form id="contactForm" class="contact-form">
 
-<div class="row g-3">
+                        <div class="row g-3">
 
-<!-- NAME -->
+                            <!-- NAME -->
 
-<div class="col-md-6">
-<label style="color:#36005A;">Name <span class="text-danger">*</span></label>
-<input type="text" name="firstname" class="form-control custom-input" placeholder="Enter Your Full Name">
-<div class="form-error" id="nameError">Please enter your name</div>
-</div>
+                            <div class="col-md-6">
+                                <label style="color:#36005A;">Name <span class="text-danger">*</span></label>
+                                <input type="text" name="firstname" class="form-control custom-input"
+                                    placeholder="Enter Your Full Name">
+                                <div class="form-error" id="nameError">Please enter your name</div>
+                            </div>
 
-<!-- EMAIL -->
+                            <!-- EMAIL -->
 
-<div class="col-md-6">
-<label style="color:#36005A;">E-mail <span class="text-danger">*</span></label>
-<input type="email" name="email" class="form-control custom-input" placeholder="Enter Your E-mail">
-<div class="form-error" id="emailError">Please enter a valid email</div>
-</div>
+                            <div class="col-md-6">
+                                <label style="color:#36005A;">E-mail <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control custom-input"
+                                    placeholder="Enter Your E-mail">
+                                <div class="form-error" id="emailError">Please enter a valid email</div>
+                            </div>
 
-<!-- PHONE -->
+                            <!-- PHONE -->
 
-<div class="col-md-6">
-<label style="color:#36005A;">Phone Number <span class="text-danger">*</span></label>
-<input id="phone" name="phone" type="tel" class="form-control phone-input" placeholder="Enter phone number">
-<div class="form-error" id="phoneError">Please enter phone number</div>
-</div>
+                            <div class="col-md-6">
+                                <label style="color:#36005A;">Phone Number <span class="text-danger">*</span></label>
+                                <input id="phone" name="phone" type="tel" class="form-control phone-input"
+                                    placeholder="Enter phone number">
+                                <div class="form-error" id="phoneError">Please enter phone number</div>
+                            </div>
 
-<!-- COMPANY -->
+                            <!-- COMPANY -->
 
-<div class="col-md-6">
-<label style="color:#36005A;">Organisation Name <span class="text-danger">*</span></label>
-<input type="text" name="company" class="form-control custom-input" placeholder="Enter Your Organisation Name">
-<div class="form-error" id="companyError">Please enter organisation name</div>
-</div>
+                            <div class="col-md-6">
+                                <label style="color:#36005A;">Organisation Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" name="company" class="form-control custom-input"
+                                    placeholder="Enter Your Organisation Name">
+                                <div class="form-error" id="companyError">Please enter organisation name</div>
+                            </div>
 
-<!-- MESSAGE -->
+                            <!-- MESSAGE -->
 
-<div class="col-12">
-<label style="color:#36005A;">Add a Message</label>
-<textarea name="message" rows="4" class="form-control custom-input" placeholder="Enter Your Message..."></textarea>
-</div>
+                            <div class="col-12">
+                                <label style="color:#36005A;">Add a Message</label>
+                                <textarea name="message" rows="4" class="form-control custom-input"
+                                    placeholder="Enter Your Message..."></textarea>
+                            </div>
 
-<!-- BUTTON -->
+                            <!-- BUTTON -->
 
-<div class="col-12 mt-3">
+                            <div class="col-12 mt-3">
 
-<button type="submit" class="btn contact-btn">
+                                <button type="submit" class="btn contact-btn">
 
-Submit
+                                    Submit
 
-<span class="service-icon">
-<i class="fa-solid fa-arrow-right"></i>
-</span>
+                                    <span class="service-icon">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
 
-</button>
+                                </button>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-</form>
+                    </form>
 
 
-<style>
+                    <style>
+                        .form-error {
+                            display: none;
+                            color: red;
+                            font-size: 13px;
+                            margin-top: 4px;
+                        }
 
-.form-error{
-display:none;
-color:red;
-font-size:13px;
-margin-top:4px;
-}
+                        .input-error {
+                            border: 1px solid red;
+                        }
+                    </style>
 
-.input-error{
-border:1px solid red;
-}
 
-</style>
+                    <script>
 
+                        /* VALIDATION FUNCTION */
 
-<script>
+                        function validateForm() {
 
-/* VALIDATION FUNCTION */
+                            let valid = true;
 
-function validateForm(){
+                            const form = document.getElementById("contactForm");
 
-let valid=true;
+                            const name = form.firstname.value.trim();
+                            const email = form.email.value.trim();
+                            const phone = form.phone.value.trim();
+                            const company = form.company.value.trim();
 
-const form=document.getElementById("contactForm");
+                            /* RESET */
 
-const name=form.firstname.value.trim();
-const email=form.email.value.trim();
-const phone=form.phone.value.trim();
-const company=form.company.value.trim();
+                            document.querySelectorAll(".form-error").forEach(el => {
+                                el.style.display = "none";
+                            });
 
-/* RESET */
+                            document.querySelectorAll("input").forEach(el => {
+                                el.classList.remove("input-error");
+                            });
 
-document.querySelectorAll(".form-error").forEach(el=>{
-el.style.display="none";
-});
+                            /* NAME */
 
-document.querySelectorAll("input").forEach(el=>{
-el.classList.remove("input-error");
-});
+                            if (name === "") {
+                                document.getElementById("nameError").style.display = "block";
+                                form.firstname.classList.add("input-error");
+                                valid = false;
+                            }
 
-/* NAME */
+                            /* EMAIL */
 
-if(name===""){
-document.getElementById("nameError").style.display="block";
-form.firstname.classList.add("input-error");
-valid=false;
-}
+                            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/* EMAIL */
+                            if (!emailPattern.test(email)) {
+                                document.getElementById("emailError").style.display = "block";
+                                form.email.classList.add("input-error");
+                                valid = false;
+                            }
 
-const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            /* PHONE */
 
-if(!emailPattern.test(email)){
-document.getElementById("emailError").style.display="block";
-form.email.classList.add("input-error");
-valid=false;
-}
+                            if (phone === "") {
+                                document.getElementById("phoneError").style.display = "block";
+                                form.phone.classList.add("input-error");
+                                valid = false;
+                            }
 
-/* PHONE */
+                            /* COMPANY */
 
-if(phone===""){
-document.getElementById("phoneError").style.display="block";
-form.phone.classList.add("input-error");
-valid=false;
-}
+                            if (company === "") {
+                                document.getElementById("companyError").style.display = "block";
+                                form.company.classList.add("input-error");
+                                valid = false;
+                            }
 
-/* COMPANY */
+                            return valid;
 
-if(company===""){
-document.getElementById("companyError").style.display="block";
-form.company.classList.add("input-error");
-valid=false;
-}
+                        }
 
-return valid;
 
-}
+                        /* FORM SUBMIT */
 
+                        document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-/* FORM SUBMIT */
+                            e.preventDefault();
 
-document.getElementById("contactForm").addEventListener("submit",function(e){
+                            /* RUN VALIDATION */
 
-e.preventDefault();
+                            if (!validateForm()) {
+                                return;
+                            }
 
-/* RUN VALIDATION */
+                            const form = document.getElementById("contactForm");
 
-if(!validateForm()){
-return;
-}
+                            const data = {
+                                submittedAt: Date.now(),
+                                fields: [
+                                    { name: "firstname", value: form.firstname.value },
+                                    { name: "email", value: form.email.value },
+                                    { name: "phone", value: form.phone.value },
+                                    { name: "company", value: form.company.value },
+                                    { name: "message", value: form.message.value }
+                                ],
+                                context: {
+                                    pageUri: window.location.href,
+                                    pageName: document.title
+                                }
+                            };
 
-const form=document.getElementById("contactForm");
+                            /* HUBSPOT SUBMIT */
 
-const data={
-submittedAt:Date.now(),
-fields:[
-{name:"firstname",value:form.firstname.value},
-{name:"email",value:form.email.value},
-{name:"phone",value:form.phone.value},
-{name:"company",value:form.company.value},
-{name:"message",value:form.message.value}
-],
-context:{
-pageUri:window.location.href,
-pageName:document.title
-}
-};
+                            fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d", {
 
-/* HUBSPOT SUBMIT */
+                                method: "POST",
 
-fetch("https://api.hsforms.com/submissions/v3/integration/submit/8043110/d5a0a680-72fb-4ba3-a9f3-f274216f0f2d",{
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
 
-method:"POST",
+                                body: JSON.stringify(data)
 
-headers:{
-"Content-Type":"application/json"
-},
+                            })
 
-body:JSON.stringify(data)
+                                .then(res => res.json())
 
-})
+                                .then(response => {
 
-.then(res=>res.json())
+                                    console.log(response);
 
-.then(response=>{
+                                    if (response.status === "error") {
 
-console.log(response);
+                                        alert("Submission failed");
 
-if(response.status==="error"){
+                                    } else {
 
-alert("Submission failed");
+                                        form.reset();
 
-}else{
+                                        window.location.href = "thankyou.html";
 
-form.reset();
+                                    }
 
-window.location.href="thankyou.html";
+                                })
 
-}
+                                .catch(err => {
 
-})
+                                    console.error(err);
 
-.catch(err=>{
+                                    alert("Submission failed");
 
-console.error(err);
+                                });
 
-alert("Submission failed");
+                        });
 
-});
-
-});
-
-</script>
+                    </script>
 
                 </div>
 
@@ -559,16 +573,99 @@ alert("Submission failed");
     </section>
 
 
+    <!-- country section -->
+    <section class="global-presence py-5">
+        <div class="container">
+            
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="approach-title">
+                        Our <span>Global Presence</span>
+                    </h2>
+                    <p class="presence-subtitle">
+                        Serving clients across multiple regions with dedicated offices worldwide.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- INDIA -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="office-box">
+
+                        <div class="office-header">
+                            <img src="assets/flag/india.webp" alt="India Flag">
+                            <h5>India</h5>
+                        </div>
+
+                        <div class="office-body">
+                            <p>
+                                1009, Lodha Supremus II,<br>
+                                Kolshet Road, Thane - 400607,<br>
+                                Maharashtra
+                            </p>
+
+                            <div class="office-phone">
+                                <i class="fa-solid fa-phone"></i> <a href="tel:+919594415599"> +91 95944 15599</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
 
 
+                <!-- UAE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="office-box">
 
-    <section class="map-section">
+                        <div class="office-header">
+                            <img src="assets/flag/uae.webp" alt="UAE Flag">
+                            <h5>UAE</h5>
+                        </div>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.0797435917702!2d72.98784850000001!3d19.2353561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0d0c9dbe29b%3A0x4fd828f2d257278f!2sTechnosprout%20Systems%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1773231997360!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+                        <div class="office-body">
+                            <p>
+                                Level 2902, Marina Plaza,<br>
+                                Dubai Marina, Dubai,<br>
+                                United Arab Emirates
+                            </p>
 
+                            <div class="office-phone">
+                                <i class="fa-solid fa-phone"></i><a href="tel:+97145506347"> +971 4 550 6347</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- USA -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="office-box">
+
+                        <div class="office-header">
+                            <img src="assets/flag/usa.webp" alt="USA Flag">
+                            <h5>USA</h5>
+                        </div>
+
+                        <div class="office-body">
+                            <p>
+                                2nd Floor, 95 Third Street,<br>
+                                San Francisco, California 94103,<br>
+                                United States
+                            </p>
+
+                            <div class="office-phone">
+                                <i class="fa-solid fa-phone"></i> <a href="tel:+14152198793"> +1 415 2198793</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
 
@@ -581,7 +678,7 @@ alert("Submission failed");
 
                     <!-- Logo + About -->
                     <div class="col-lg-5 col-md-6">
-                        <a class="footer-logo d-inline-block mb-2" href="#">
+                        <a class="footer-logo d-inline-block mb-2" href="index.html">
                             <img src="assets/footer-logo.png" alt="logo">
                         </a>
                         <p class="footer-text">
@@ -604,7 +701,7 @@ alert("Submission failed");
                         <h6 class="footer-title">Quick Links</h6>
                         <ul class="footer-links">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="services.html">Services</a></li>
                             <li><a href="#">Blogs</a></li>
                             <li><a href="#">Capabilities</a></li>
                             <li><a href="#">Careers</a></li>
@@ -616,7 +713,7 @@ alert("Submission failed");
                         <h6 class="footer-title">Support</h6>
                         <ul class="footer-links">
                             <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -624,7 +721,8 @@ alert("Submission failed");
                     <div class="col-lg-3 col-md-6">
                         <h6 class="footer-title">Contact</h6>
                         <p><a href="tel:+9594415599" style="color:#fff;">+91 95944 15599</a></p>
-                        <p> <a href="mailto:support@technosprout.in" style="color:#fff;">support@technosprout.in</a> </p>
+                        <p> <a href="mailto:support@technosprout.in" style="color:#fff;">support@technosprout.in</a>
+                        </p>
                         <p>
                             1009, Lodha Supremus,</br> Kolshet Road,<br>
                             Thane - 400 607

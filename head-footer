@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Technosprout Systems Pvt. Ltd.</title>
+    <meta name="description"
+        content="Technosprout is a technology consulting company that helps businesses design, deploy, and manage structured technology environments. We work with organizations to modernize platforms, improve security, establish governance, and ensure technology systems support long-term growth. Our services include technology strategy, platform implementation, operations management, and automation solutions. We empower businesses to transform technology from a daily struggle into a structured engine for growth, control, and scalability.">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/@tabler/icons@latest/icons-react/dist/index.umd.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+    <a href="tel:+9594415599" class="call-float">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <!-- HEADER -->
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-lg-5 px-3">
+
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/logo-transparent.png" alt="logo">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="collapse navbar-collapse">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Company
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blogs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+
+                    </ul>
+
+                    <a class="btn btn-consult desktop-btn" href="tel:+919594415599">
+                        <i class="fa-solid fa-phone me-1"></i> Get in Touch
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- MOBILE OFFCANVAS -->
+
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu">
+
+            <div class="offcanvas-header">
+
+                <a class="navbar-brand logo" href="index.html">
+                    <img src="assets/logo-transparent.png" alt="logo">
+                </a>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+
+            </div>
+
+
+            <div class="offcanvas-body">
+
+                <ul class="mobile-menu">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li class="mobile-dropdown">
+
+                        <button class="dropdown-btn">
+
+                            <span class="menu-label">
+                                Company
+                                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                            </span>
+
+                        </button>
+
+                        <ul class="dropdown-content">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Capabilities</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Blogs</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+
+                <hr class="line">
+
+
+                <div class="mobile-contact">
+
+                    <p>
+                        <strong>Address</strong><br>
+                        1009, Lodha Supremus,<br>
+                        Kolshet Road
+                    </p>
+
+                    <p>
+                        <strong>Email</strong><br>
+                        <a href="mailto:support@technosprout.in">support@technosprout.in</a>
+                    </p>
+
+                    <p>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+919594415599">+91 95944 15599</a>
+                    </p>
+
+                    <div class="mobile-social">
+
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+  
+
+    
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-overlay">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <!-- Logo + About -->
+                    <div class="col-lg-5 col-md-6">
+                        <a class="footer-logo d-inline-block mb-2" href="#">
+                            <img src="assets/footer-logo.png" alt="logo">
+                        </a>
+                        <p class="footer-text">
+                            Transform Your Business Through Technology Excellence
+                            Build structured, scalable growth through the right
+                            technology foundation.
+                        </p>
+                        <div class="social-icons">
+                            <span>Follow us :</span>
+                            </br>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <!-- <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a> -->
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="footer-title">Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li><a href="#">Capabilities</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="col-lg-2 col-md-6">
+                        <h6 class="footer-title">Support</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3 col-md-6">
+                        <h6 class="footer-title">Contact</h6>
+                        <p><a href="tel:+9594415599" style="color: #fff;">+91 95944 15599</a></p>
+                        <p> <a href="mailto:support@technosprout.in" style="color: #fff;">support@technosprout.in</a>
+                        </p>
+                        <p>
+                            1009, Lodha Supremus,</br> Kolshet Road,<br>
+                            Thane - 400 607
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom"
+                    style="display:flex; justify-content:center; align-items:center; font-size: 22px;">
+                    <p style="margin:0;">Copyright © 2026 All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+      <script>
+
+        document.querySelectorAll(".dropdown-btn").forEach(button => {
+
+            button.addEventListener("click", function () {
+
+                const dropdown = this.nextElementSibling;
+
+                dropdown.classList.toggle("show");
+
+                this.classList.toggle("active");
+
+            });
+
+        });
+
+    </script>
+
+
+    <script>
+
+        const cards = document.querySelectorAll(".industry-card");
+
+        let index = 0;
+
+        setInterval(() => {
+
+            cards.forEach(card => {
+                card.classList.remove("active", "prev", "next");
+            });
+
+            index++;
+
+            if (index >= cards.length) {
+                index = 0;
+            }
+
+            let prev = (index - 1 + cards.length) % cards.length;
+            let next = (index + 1) % cards.length;
+
+            cards[index].classList.add("active");
+            cards[next].classList.add("next");
+            cards[prev].classList.add("prev");
+
+        }, 3000);
+
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="counters.js"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const phoneInput = document.querySelector("#phone");
+
+            window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: false,
+                preferredCountries: ["in", "us", "gb"],
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
