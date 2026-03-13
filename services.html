@@ -24,6 +24,16 @@
 
 </head>
 
+<style>
+    .service-card-box {
+        position: relative;
+        height: 300px !important;
+        border-radius: 22px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+</style>
+
 <body>
     <a href="tel:+9594415599" class="call-float">
         <i class="fa-solid fa-phone"></i>
@@ -61,7 +71,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Careers</a></li> -->
                             </ul>
 
                         </li>
@@ -70,9 +80,9 @@
                             <a class="nav-link" href="#">Services</a>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Blogs</a>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact Us</a>
@@ -125,7 +135,7 @@
 
                         <ul class="dropdown-content">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <!-- <li><a href="#">Careers</a></li> -->
                         </ul>
 
                     </li>
@@ -138,9 +148,9 @@
                         <a href="#">Capabilities</a>
                     </li> -->
 
-                    <li>
+                    <!-- <li>
                         <a href="#">Blogs</a>
-                    </li>
+                    </li> -->
 
                     <li>
                         <a href="contact.html">Contact</a>
@@ -386,7 +396,203 @@
     </section>
 
 
-     <!-- our services section -->
+    <!-- How the framework works (Services) -->
+    <section class="framework-section">
+
+        <div class="container">
+
+            <h2 class="approach-title text-center">
+                    How the framework <span>Works</span>
+                </h2>
+
+            <div class="stack-container">
+
+                <!-- CARD 1 -->
+                <div class="stack-card">
+                    <div class="card-number">01</div>
+
+                    <h3>Business Context</h3>
+
+                    <p>Every transformation begins with understanding the business. We analyze:</p>
+
+                    <ul>
+                        <li>Business objectives</li>
+                        <li>Operational processes</li>
+                        <li>Growth strategies</li>
+                        <li>Technology dependencies</li>
+                    </ul>
+
+                    <p>This ensures technology decisions align directly with business outcomes.</p>
+
+                </div>
+
+
+                <!-- CARD 2 -->
+                <div class="stack-card">
+
+                    <div class="card-number">02</div>
+
+                    <h3>Capability Layer</h3>
+
+                    <p>The foundation of the framework includes four core technology domains.</p>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Applications</strong><br>Business systems and enterprise platforms</li>
+
+                                <li><strong>Infrastructure</strong><br>Cloud platforms, compute environments, and
+                                    networks</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Users</strong><br>Identity, access, and workforce productivity</li>
+
+                                <li><strong>Data</strong><br>Analytics and information management</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <p>Together these capabilities form the technology foundation of the organization.</p>
+
+                </div>
+
+
+                <!-- CARD 3 -->
+                <div class="stack-card">
+
+                    <div class="card-number">03</div>
+
+                    <h3>Management Domains</h3>
+
+                    <p>Technology capabilities must be effectively managed to deliver value. We focus on three
+                        operational domains:</p>
+
+                    <ul>
+
+                        <li>
+                            <strong>Design</strong><br>
+                            Architecture and technology planning aligned with business goals
+                        </li>
+
+                        <li>
+                            <strong>Deploy</strong><br>
+                            Implementation, integration, and rollout of technology platforms
+                        </li>
+
+                        <li>
+                            <strong>Manage</strong><br>
+                            Ongoing operations, monitoring, and performance optimization
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CARD 4 -->
+                <div class="stack-card">
+
+                    <div class="card-number">04</div>
+
+                    <h3>Governance</h3>
+
+                    <p>Governance ensures that technology initiatives remain aligned with organizational priorities. It
+                        establishes:</p>
+
+                    <ul>
+                        <li>Technology standards</li>
+                        <li>Decision-making frameworks</li>
+                        <li>Operational accountability</li>
+                        <li>Change management processes</li>
+                    </ul>
+
+                    <p>Governance provides control and strategic alignment.</p>
+
+                </div>
+
+
+                <!-- CARD 5 -->
+                <div class="stack-card">
+
+                    <div class="card-number">05</div>
+
+                    <h3>Risk & Compliance</h3>
+
+                    <p>Risk and compliance overlay the entire technology environment. This ensures that all systems and
+                        operations adhere to security standards and regulatory requirements.</p>
+
+                    <p>Focus areas include:</p>
+
+                    <ul>
+                        <li>Security frameworks</li>
+                        <li>Identity governance</li>
+                        <li>Compliance readiness</li>
+                        <li>Risk monitoring</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- CARD 6 -->
+                <div class="stack-card">
+
+                    <div class="card-number">06</div>
+
+                    <h3>Continuous Optimization</h3>
+
+                    <p>Technology environments must evolve as businesses grow. Our framework includes a continuous
+                        feedback loop that enables:</p>
+
+                    <ul>
+                        <li>Performance improvement</li>
+                        <li>Automation of manual processes</li>
+                        <li>Technology optimization</li>
+                        <li>Increased operational efficiency</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let cards = gsap.utils.toArray(".stack-card");
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".framework-section",
+                start: "top top",
+                end: "+=2000",
+                scrub: true,
+                pin: true
+            }
+        });
+
+        cards.forEach((card, i) => {
+
+            if (i > 0) {
+
+                tl.to(card, {
+                    y: -150 * i
+                }, 0);
+
+            }
+
+        });
+    </script>
+
+
+    <!-- our services section -->
     <section class="services-section py-5">
         <div class="container">
 
@@ -413,12 +619,6 @@
 
                         <div class="service-card-hover">
                             <p>Designing and implementing modern technology platforms.</p>
-                            <a href="#" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
                         </div>
 
                     </div>
@@ -435,12 +635,6 @@
 
                         <div class="service-card-hover">
                             <p>Deploy scalable platforms that power modern business.</p>
-                            <a href="#" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
                         </div>
 
                     </div>
@@ -457,12 +651,6 @@
 
                         <div class="service-card-hover">
                             <p>Operate and optimize systems for reliability and growth.</p>
-                            <a href="#" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
                         </div>
 
                     </div>
@@ -478,13 +666,11 @@
                         </div>
 
                         <div class="service-card-hover">
-                            <p>Automate workflows and improve operational efficiency.</p>
-                            <a href="#" class="service-btn">
-                                Know More
-                                <span class="service-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
+                            <p>Automate workflows and improve operational efficiency.
+                                Automate workflows and improve operational efficiency.
+                                Automate workflows and improve operational efficiency.
+                                Automate workflows and improve operational efficiency.
+                            </p>
                         </div>
 
                     </div>
@@ -498,14 +684,12 @@
     <!-- business outcomes section -->
     <section class="benefits-section py-5">
         <div class="container">
-            <div class="col-lg-7">
-
+            <div class="text-center">
                 <h2 class="approach-title">
                     Business <span>Outcomes</span> </br>
                     We Deliver
                 </h2>
-
-                <p class="approach-desc">
+                <p class="services-subtitle">
                     Our focus is not just technology implementation
                     but measurable business impact.
                     Organizations working with us achieve:
@@ -555,6 +739,46 @@
         </div>
     </section>
 
+    <!-- cta section -->
+
+    <section class="cta-pro-section">
+        <div class="container">
+
+            <div class="cta-pro-card">
+
+                <!-- LEFT IMAGE -->
+                <div class="cta-pro-illustration">
+                    <img src="assets/cta1.svg" alt="">
+                </div>
+
+                <!-- CONTENT -->
+                <div class="cta-pro-content">
+
+                    <h2 class="approach-title">
+                        Don't Just Dream It - <span>Work It !</span> </br>
+                        We Deliver
+                    </h2>
+
+                    <p>
+                        Connect us today and take the first step towards technology excellence
+                    </p>
+
+                    <div class="cta-pro-buttons">
+
+                        <a href="contact.html" class="btn btn-consult">Get a Quote <i
+                                class="fa-solid fa-arrow-up-right-from-square me-2"></i></a>
+
+                        <a href="tel:+919594415599" class="btn btn-consult"> <i class="fa-solid fa-headset me-2"></i>
+                            Talk to an Expert</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
 
 
@@ -591,9 +815,9 @@
                         <ul class="footer-links">
                             <li><a href="#">About Us</a></li>
                             <li><a href="services.html">Services</a></li>
-                            <li><a href="#">Blogs</a></li>
+                            <!-- <li><a href="#">Blogs</a></li> -->
                             <!-- <li><a href="#">Capabilities</a></li> -->
-                            <li><a href="#">Careers</a></li>
+                            <!-- <li><a href="#">Careers</a></li> -->
                         </ul>
                     </div>
 
@@ -650,37 +874,6 @@
     </script>
 
 
-    <script>
-
-        const cards = document.querySelectorAll(".industry-card");
-
-        let index = 0;
-
-        setInterval(() => {
-
-            cards.forEach(card => {
-                card.classList.remove("active", "prev", "next");
-            });
-
-            index++;
-
-            if (index >= cards.length) {
-                index = 0;
-            }
-
-            let prev = (index - 1 + cards.length) % cards.length;
-            let next = (index + 1) % cards.length;
-
-            cards[index].classList.add("active");
-            cards[next].classList.add("next");
-            cards[prev].classList.add("prev");
-
-        }, 3000);
-
-    </script>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="counters.js"></script>
@@ -689,22 +882,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const phoneInput = document.querySelector("#phone");
-
-            window.intlTelInput(phoneInput, {
-                initialCountry: "in",
-                separateDialCode: false,
-                preferredCountries: ["in", "us", "gb"],
-                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
-            });
-
-        });
-    </script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 
 </html>
