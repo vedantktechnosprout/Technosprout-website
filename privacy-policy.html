@@ -25,7 +25,19 @@
 </head>
 
 <body>
-        <!-- <a href="tel:+9594415599" class="call-float">
+
+    <style>
+        .text-primary {
+            --bs-text-opacity: 1;
+            color: rgb(102 53 139) !important;
+        }
+
+        a {
+            color: rgb(102 53 139);
+            text-decoration: underline;
+        }
+    </style>
+    <!-- <a href="tel:+9594415599" class="call-float">
             <i class="fa-solid fa-phone"></i>
         </a> -->
     <!-- HEADER -->
@@ -61,7 +73,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Careers</a></li> -->
                             </ul>
 
                         </li>
@@ -185,28 +197,206 @@
 
     </header>
 
-     <section class="approach-section py-5">
+    <style>
+        /* PAGE */
+        .policy-page {
+            background: #ffffff;
+            padding: 100px 0;
+        }
+
+
+        /* PAGE TITLE */
+        .policy-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .policy-date {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* SECTION */
+        .policy-section {
+            margin-bottom: 35px;
+        }
+
+        /* SECTION TITLE */
+        .policy-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        /* TEXT */
+        .policy-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        /* LIST */
+        .policy-section ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .policy-section li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* LINK */
+        .policy-section a {
+            color: #66358b;
+            text-decoration: none;
+        }
+
+        .policy-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .policy-page {
+                padding: 70px 20px;
+            }
+
+            .policy-title {
+                font-size: 32px;
+            }
+
+        }
+    </style>
+
+
+    <section class="policy-page">
+
         <div class="container">
 
-            <div class="row align-items-center gy-5">
+            <div class="policy-wrapper">
 
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-7">
-                    <p class="approach-desc">
-                        About Technosprout
+                <h1 class="policy-title">Privacy Policy</h1>
+
+                <p class="policy-date">Last updated: March 2026</p>
+
+
+                <div class="policy-section">
+
+                    <h2>Introduction</h2>
+
+                    <p>
+                        At Technosprout Systems Pvt. Ltd, accessible from
+                        <a href="https://technosprout.in/">https://technosprout.in/</a>,
+                        one of our main priorities is the privacy of our visitors.
                     </p>
 
-                    <h2 class="approach-title">
-                       Technology should  <br>
-                    <span>create clarity,</span>
-                        not complexity 
-                    </h2>
+                    <p>
+                        This Privacy Policy document contains types of information
+                        that are collected and recorded by Technosprout Systems Pvt. Ltd
+                        and how we use it.
+                    </p>
 
-                    
                 </div>
-            </div>
 
+
+
+                <div class="policy-section">
+
+                    <h2>Information We Collect</h2>
+
+                    <p>We may collect personal information including:</p>
+
+                    <ul>
+
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Information you provide in contact forms</li>
+
+                    </ul>
+
+                    <p>
+                        We may also automatically collect technical information such as
+                        your IP address, browser type, and device information.
+                    </p>
+
+                </div>
+
+
+
+                <div class="policy-section">
+
+                    <h2>How We Use Your Information</h2>
+
+                    <p>We use the collected information for various purposes:</p>
+
+                    <ul>
+
+                        <li>To operate and maintain our website</li>
+                        <li>To improve user experience</li>
+                        <li>To respond to inquiries and support requests</li>
+                        <li>To send important updates</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="policy-section">
+
+                    <h2>Cookies</h2>
+
+                    <p>
+                        Our website may use cookies to store information including
+                        visitor preferences and the pages visited on the website.
+                    </p>
+
+                </div>
+
+
+
+                <div class="policy-section">
+
+                    <h2>Third Party Privacy Policies</h2>
+
+                    <p>
+                        Technosprout Systems Pvt. Ltd's Privacy Policy does not apply
+                        to other advertisers or websites.
+                    </p>
+
+                </div>
+
+
+
+                <div class="policy-section">
+
+                    <h2>Contact Us</h2>
+
+                    <p>
+                        If you have questions about this Privacy Policy,
+                        you can contact us at:
+                    </p>
+
+                    <p>
+                        Email:
+                        <a href="mailto:tsp@technosprout.in">tsp@technosprout.in</a>
+                    </p>
+
+                </div>
+
+
+            </div>
         </div>
+
     </section>
 
     <!-- FOOTER -->
@@ -241,7 +431,7 @@
                         <h6 class="footer-title">Quick Links</h6>
                         <ul class="footer-links">
                             <li><a href="about-us.html">About Us</a></li>
-                           <li><a href="services.html">Services</a></li>
+                            <li><a href="services.html">Services</a></li>
                             <!--  <li><a href="#">Blogs</a></li>
                             <li><a href="#">Capabilities</a></li>
                             <li><a href="#">Careers</a></li> -->
@@ -282,7 +472,7 @@
         </div>
     </footer>
 
-      <script>
+    <script>
 
         document.querySelectorAll(".dropdown-btn").forEach(button => {
 

@@ -811,7 +811,7 @@ body {
 /* Industries We Serve */
 .business-section {
     padding: 40px 0;
-    background: #f5f5f5;
+    /* background: #f5f5f5; */
 }
 
 .tag {
@@ -2065,89 +2065,6 @@ p a[href^="mailto"]:hover {
 
 }
 
-/* operating model section (Services) */
-.logic-section {
-    padding: 80px 0;
-    background: #f6f6f6;
-}
-
-.logic-container {
-    max-width: 900px;
-    margin: auto;
-}
-
-/* timeline */
-
-.logic-timeline {
-    position: relative;
-    padding-left: 80px;
-}
-
-/* dotted line */
-
-.logic-timeline:before {
-    content: "";
-    position: absolute;
-    left: 34px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    border-left: 2px dashed #cfcfcf;
-}
-
-/* item */
-
-.logic-item {
-    position: relative;
-    margin-bottom: 55px;
-}
-
-/* half circle */
-
-.logic-dot {
-    position: absolute;
-    left: -62px;
-    top: 0;
-    width: 56px;
-    height: 28px;
-    background: #fff;
-    border-radius: 50px 50px 0 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* content */
-
-.logic-content h4 {
-    font-size: 16px;
-    margin-bottom: 6px;
-    color: #111;
-}
-
-.logic-content p {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* responsive */
-
-@media (max-width:768px) {
-
-    .logic-timeline {
-        padding-left: 60px;
-    }
-
-    .logic-dot {
-        left: -50px;
-        width: 46px;
-        height: 24px;
-    }
-
-}
-
-/* cta section */
-
 /* SECTION */
 
 .cta-ex-section {
@@ -2342,9 +2259,9 @@ p a[href^="mailto"]:hover {
 
     margin-bottom: 40px;
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.08);
 
-    transition: all .3s ease;
+   transition: height .4s ease;
 }
 
 /* stacking spacing */
@@ -2398,6 +2315,200 @@ p a[href^="mailto"]:hover {
     .stack-card {
         padding: 30px;
         top: 100px;
+    }
+
+}
+
+/* operating model section (Services) */
+/* SECTION BACKGROUND */
+
+.operating-model-section{
+    background:#f7f7f9;
+}
+
+
+/* IMAGE */
+
+.framework-image{
+    min-height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.framework-image img{
+    max-width:100%;
+}
+
+
+/* TIMELINE WRAPPER */
+
+.timeline-wrapper{
+    position:relative;
+    padding-left:80px;
+}
+
+
+/* BASE DOTTED LINE */
+
+.timeline-wrapper::before{
+    content:"";
+    position:absolute;
+    left:30px;
+    top:0;
+    bottom:0;
+    border-left:2px dashed #d4d4d4;
+}
+
+
+/* ANIMATED PROGRESS LINE */
+
+.timeline-progress{
+    position:absolute;
+    left:30px;
+    top:0;
+    width:3px;
+    height:0;
+
+    background:linear-gradient(
+        to bottom,
+        #6a4cff,
+        #9a63ff,
+        #ff7bd5,
+        #ff9a4a,
+        #ffc94a,
+        #3ddc97
+    );
+
+    transition:height .8s cubic-bezier(.22,.61,.36,1);
+}
+
+
+/* TIMELINE ITEM */
+
+.timeline-item{
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    margin-bottom:45px;
+}
+
+
+/* CIRCLE */
+
+.timeline-circle{
+
+    position:absolute;
+    left:-70px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+    background:#fff;
+
+    border:2px solid #66358b;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:600;
+    color:#66358b;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+
+    transition:all .35s ease;
+}
+
+
+/* CONTENT */
+
+.timeline-content h5{
+    font-weight:600;
+    margin-bottom:6px;
+    transition:.3s;
+}
+
+.timeline-content p{
+    font-size:14px;
+    color:#666;
+    margin:0;
+    line-height:1.6;
+    transition:.3s;
+}
+
+
+/* ACTIVE STATE */
+
+.timeline-item.active .timeline-circle{
+    /* background:#66358b; */
+    color:#000000;
+    /* box-shadow:0 0 18px rgba(102,53,139,.7); */
+    transform:scale(1.15);
+}
+
+.timeline-item.active h5{
+    color:#66358b;
+}
+
+.timeline-item.active p{
+    color:#333;
+}
+
+
+/* HOVER EFFECT */
+
+.timeline-item:hover .timeline-circle{
+    transform:scale(1.12);
+    box-shadow:0 0 15px rgba(102,53,139,.5);
+}
+
+.timeline-item:hover h5{
+    color:#66358b;
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media(max-width:992px){
+
+    .framework-image{
+        margin-bottom:40px;
+    }
+
+    .timeline-wrapper{
+        padding-left:70px;
+    }
+
+}
+
+
+/* RESPONSIVE MOBILE */
+
+@media(max-width:576px){
+
+    .timeline-wrapper{
+        padding-left:70px;
+    }
+
+    .timeline-circle{
+        left:-55px;
+        width:34px;
+        height:34px;
+        font-size:13px;
+    }
+
+    .timeline-item{
+        margin-bottom:35px;
+    }
+
+    .timeline-content h5{
+        font-size:16px;
+    }
+
+    .timeline-content p{
+        font-size:13px;
     }
 
 }
