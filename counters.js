@@ -1,33 +1,39 @@
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", function () {
 
-const startCounter = (counter) => {
-  const target = +counter.getAttribute("data-target");
-  let count = 0;
+  const counters = document.querySelectorAll(".counter");
 
-  const update = () => {
-    const increment = target / 100;
+  const startCounter = (counter) => {
 
-    if (count < target) {
-      count += increment;
-      counter.innerText = Math.ceil(count) + "+";
-      requestAnimationFrame(update);
-    } else {
-      counter.innerText = target + "+";
-    }
+    const start = parseInt(counter.getAttribute("data-start")) || 0;
+    const target = parseInt(counter.getAttribute("data-target"));
+    const symbol = counter.getAttribute("data-symbol") || "";
+    const speed = parseInt(counter.getAttribute("data-speed")) || 80;
+
+    let count = start;
+
+    const update = () => {
+
+      if (count < target) {
+
+        count++;
+
+        counter.innerText = count + symbol;
+
+        setTimeout(update, speed);
+
+      } else {
+
+        counter.innerText = target + symbol;
+
+      }
+
+    };
+
+    update();
   };
 
-  update();
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      startCounter(entry.target);
-      observer.unobserve(entry.target);
-    }
+  counters.forEach(counter => {
+    startCounter(counter);
   });
-});
 
-counters.forEach((counter) => {
-  observer.observe(counter);
 });
