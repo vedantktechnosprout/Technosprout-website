@@ -1,33 +1,43 @@
-const counters = document.querySelectorAll(".counter");
+document.addEventListener("DOMContentLoaded", function () {
 
-const startCounter = (counter) => {
-  const target = +counter.getAttribute("data-target");
-  let count = 0;
+  const counters = document.querySelectorAll(".counter");
 
-  const update = () => {
-    const increment = target / 100;
+  const startCounter = (counter) => {
+    const target = parseInt(counter.getAttribute("data-target"));
+    const symbol = counter.getAttribute("data-symbol") || "+";
+    let count = 0;
 
-    if (count < target) {
-      count += increment;
-      counter.innerText = Math.ceil(count) + "+";
-      requestAnimationFrame(update);
-    } else {
-      counter.innerText = target + "+";
-    }
+    const duration = 2000; // animation duration (2 seconds)
+    const stepTime = Math.abs(Math.floor(duration / target));
+
+    const timer = setInterval(() => {
+      count++;
+
+      counter.innerText = count + symbol;
+
+      if (count >= target) {
+        counter.innerText = target + symbol;
+        clearInterval(timer);
+      }
+
+    }, stepTime);
   };
 
-  update();
-};
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      startCounter(entry.target);
-      observer.unobserve(entry.target);
-    }
+      if (entry.isIntersecting) {
+        startCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+
+    });
+  }, {
+    threshold: 0.6
   });
-});
 
-counters.forEach((counter) => {
-  observer.observe(counter);
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+
 });

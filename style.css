@@ -311,8 +311,9 @@ body {
 }
 
 .hero-title span {
-    color: #591487;
+    color: #36005a;
     font-style: italic;
+    font-weight: 850;
 }
 
 /* TEXT */
@@ -480,9 +481,10 @@ body {
 /* Numbers */
 
 .impact-box h3 {
-    font-size: 64px;
+    font-size: 55px;
     font-weight: 700;
     color: #66358b;
+    margin-top: 15px;
 }
 
 /* Text under numbers */
@@ -584,11 +586,11 @@ body {
     margin-bottom: 15px;
 }
 
-.footer-text {
+/* .footer-text {
     font-size: 14px;
     line-height: 1.6;
     color: #d4d4d4;
-}
+} */
 
 .footer-title {
     font-size: 16px;
@@ -1176,7 +1178,7 @@ body {
 }
 
 .services-subtitle {
-    max-width: 520px;
+    /* max-width: 520px; */
     margin: auto;
     color: #666;
     font-size: 16px;
@@ -1234,12 +1236,38 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .4s;
+}
+
+
+.service-card-two-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5a2d91;
+    color: #fff;
+    border-radius: 22px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center; /* center content */
     gap: 15px; /* auto spacing */
 
     opacity: 0;
     transform: translateY(30px);
     transition: .4s;
+}
+
+.service-card-two-hover p {
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .service-card-hover p {
@@ -1363,7 +1391,7 @@ body {
 }
 
 .choose-card p {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     line-height: 1.6;
 }
@@ -1429,7 +1457,7 @@ body {
 /* item */
 
 .benefit-item {
-    padding: 20px 25px;
+    padding: 20px 10px;
     position: relative;
 }
 
@@ -1448,8 +1476,8 @@ body {
 /* icon */
 
 .benefit-item img {
-    width: 45px;
-    margin-bottom: 10px;
+    width: 54px;
+    margin-bottom: 13px;
 }
 
 /* text */
